@@ -1,8 +1,8 @@
 /**
- * LLM Integration for DayPlanner
+ * LLM Integration for AINudgeEngine
  * 
  * Handles the requestAssignmentsFromLLM functionality using Google's Gemini API.
- * The LLM prompt is hardwired with user preferences and doesn't take external hints.
+ * The LLM prompt is hardwired with user preferences and doesn't take external hints. (modifiy this to reflect my assignment)
  */
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
@@ -39,5 +39,6 @@ export class GeminiLLM {
         } catch (error) {
             console.error('❌ Error calling Gemini API:', (error as Error).message);
             throw error;
-        }    }
+        }    
+    }
 }
