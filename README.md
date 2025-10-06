@@ -31,7 +31,49 @@
 
 ##  User Interaction
 
+### Task Creation
 
++-----------------------------+  
+| New Task:                  |  
+| [Organize Workspace]        |  
+| Description: [Clean desk]  |  
+| Scheduled Start: [3:00 PM] |  
+| [Save Task]                 |  
++-----------------------------+  
+
+  --> Context for LLM:  
+      - Task title & description  
+      - Scheduled start time  
+      - User's last logged emotions  
+
+### AI-Generated Nudge
+
+[3:00 PM Nudge] (from Nudgr)  
+"Let's tackle that workspace organization!  
+Even a small step will bring calm and clarity to your anxiety."  
+
+[Options: Start Task]  [Snooze]  [Ignore]  
+
+  --> Context used by LLM:  
+      - Task info  
+      - User's current emotional state  
+      - Past nudge responses (ignored, accepted)  
+
+### User Emotion Logging  
+
+Task: Organize Workspace  
+Before starting, how do you feel?  
+
+[ ] Anxious  
+[ ] Neutral  
+[ ] Motivated  
+[Submit]  
+
+  --> Context sent to LLM for next nudge:  
+      - Selected emotion(s)  
+      - Task status (NotStarted, InProgress)  
+
+The user opens Nudgr and creates a new task by entering a title, description, and scheduled start time. The AI-augmented NudgeEngine monitors the schedule and the user’s logged emotions, then generates a personalized nudge encouraging the user to start the task. The nudge incorporates the user’s current emotional state, offering a soft or action-oriented suggestion as appropriate. The user sees the nudge and may choose to start the task immediately, snooze the reminder, or ignore it. After beginning the task, the user logs their updated emotions, which inform future AI nudges, creating a feedback loop of motivation and self-reflection.
 
 ## Validation
 
